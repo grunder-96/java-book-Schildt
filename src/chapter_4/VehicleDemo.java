@@ -5,6 +5,10 @@ class Vehicle {
 	int fuelcap;
 	int mpg;
 	
+	Vehicle() {
+		
+	}
+	
 	Vehicle(int p, int f, int m) {
 		passengers = p;
 		fuelcap = f;
