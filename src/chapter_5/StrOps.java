@@ -28,7 +28,6 @@ public class StrOps {
 		}
 		
 		result = str1.compareTo(str3);
-		System.out.println(result);
 		if (result == 0) {
 			System.out.println("str1 и str3 равны");
 		} else if (result > 0) {
