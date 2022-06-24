@@ -14,11 +14,21 @@ class QuickSort {
 		x = items[(left + right) / 2];
 		
 		do {
+			System.out.println((items[i] < x) && (i < right));
+			System.out.println((items[i] < x));
+			System.out.println((i < right));
+			System.out.println(items[i]);
+			System.out.println(items[(left + right) / 2]);
+			System.out.println('p' < 'j');
 			while ((items[i] < x) && (i < right)) {
+				System.out.print("i в while было " + i + ",");
 				i++;
+				System.out.println(" а стало " + i + ";");
 			}
 			while ((x < items[j]) && (j > left)) {
+				System.out.print("j в while было " + j + ",");
 				j--;
+				System.out.println(" а стало " + j + ";");
 			}
 			
 			if (i <= j) {
@@ -27,18 +37,21 @@ class QuickSort {
 				items[j] = y;
 				i++;
 				j--;
+				System.out.println("Блок if: значение i - " + i + ", значение j - " + j);
+				for (char val : items) {
+					System.out.print(val);
+				}
+				System.out.println("\n");
 			}
-			for (char val : items) {
-				System.out.print(val);
-			}
-			System.out.println("\n");
 		} while (i <= j);
 		
 		if (left < j) {
+			System.out.println("Запуск qs с параметрами " + left + "," + j);
 			qs(items, left, j);
 		}
 		
 		if (i < right) {
+			System.out.println("Запуск qs с параметрами " + i + "," + right);
 			qs(items, i, right);
 		}
 	}
